@@ -10,18 +10,18 @@ export default function Gallery() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
+  // Video data - Update embedUrl and title to change videos
   const videos = [
-    
     {
-      title: "",
-      embedUrl: "https://player.vimeo.com/video/1086480161?h=d4e7acd8e2&badge=0&autopause=0&player_id=0&app_id=58479",
-    },
-    {
-      title: "",
+      title: "FineDine",
       embedUrl: "https://player.vimeo.com/video/1085954269",
     },
     {
-      title: "",
+      title: "Elegant Wedding",
+      embedUrl: "https://player.vimeo.com/video/1085540189?badge=0&autopause=0&player_id=0&app_id=58479",
+    },
+    {
+      title: "Timmy Sharma",
       embedUrl: "https://player.vimeo.com/video/1085955175",
     },
   ]
@@ -37,35 +37,32 @@ export default function Gallery() {
         >
           Featured Work
         </motion.h2>
-
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {videos.map((video, index) => (
             <motion.div
               key={index}
-              className="w-full overflow-hidden rounded-xl shadow-md"
+              className="relative overflow-hidden rounded-lg mx-auto w-full"
+              style={{ maxWidth: "280px" }} // Smaller fixed width for videos
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              {/* Responsive Video Wrapper */}
-              <div className="relative w-full aspect-[9/16] sm:aspect-video lg:h-[450px]">
+              {/* Mobile-optimized video container with smaller size */}
+              <div className="aspect-[9/16] overflow-hidden">
                 <iframe
-                  className="absolute top-0 left-0 h-full w-full rounded-xl"
+                  className="h-full w-full"
                   src={video.embedUrl}
                   title={video.title}
-                  allow="autoplay; fullscreen; picture-in-picture"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
-
-              {/* Optional title overlay */}
-              <div className="bg-black/70 p-3 text-white text-sm">
-                {video.title || ""}
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                <h3 className="text-lg font-semibold text-white">{video.title}</h3>
               </div>
             </motion.div>
           ))}
         </div>
-
         <div className="mt-12 flex justify-center">
           <Link href="/categories">
             <Button className="bg-gradient-to-r from-orange-500 to-amber-600 px-8 py-6 text-lg hover:from-orange-600 hover:to-amber-700">

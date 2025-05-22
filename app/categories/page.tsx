@@ -151,90 +151,98 @@ export default function CategoriesPage() {
     Other Work
   </motion.h2>
 
-  <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <div className="grid gap-2 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3">
     {/* Video 1 */}
-    <div className="relative w-full pt-[179.63%] rounded-xl overflow-hidden">
-      <iframe
-        src="https://player.vimeo.com/video/1085953881?badge=0&autopause=0&player_id=0&app_id=58479"
-        className="absolute top-0 left-0 w-full h-full rounded-xl"
-        frameBorder="0"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        allowFullScreen
-        title="HKP- Feel The Fun1"
-      ></iframe>
+    <div className="flex justify-center items-center mx-auto overflow-hidden rounded-xl">
+      <div className="aspect-[9/16] max-w-[140px] w-full">
+        <iframe
+          src="https://player.vimeo.com/video/1085953881?badge=0&autopause=0&player_id=0&app_id=58479"
+          className="h-full w-full rounded-xl"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title="HKP- Feel The Fun1"
+        ></iframe>
+      </div>
     </div>
-
     {/* Video 2 */}
-    <div className="relative w-full pt-[177.78%] rounded-xl overflow-hidden">
-      <iframe
-        src="https://player.vimeo.com/video/1085953962?badge=0&autopause=0&player_id=0&app_id=58479"
-        className="absolute top-0 left-0 w-full h-full rounded-xl"
-        frameBorder="0"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        allowFullScreen
-        title="CulturalEvent BowValleyCollege2"
-      ></iframe>
+    <div className="flex justify-center items-center mx-auto overflow-hidden rounded-xl">
+      <div className="aspect-[9/16] max-w-[140px] w-full">
+        <iframe
+          src="https://player.vimeo.com/video/1085953962?badge=0&autopause=0&player_id=0&app_id=58479"
+          className="h-full w-full rounded-xl"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title="CulturalEvent BowValleyCollege2"
+        ></iframe>
+      </div>
     </div>
-
     {/* Video 3 */}
-    <div className="relative w-full pt-[179.63%] rounded-xl overflow-hidden">
-      <iframe
-        src="https://player.vimeo.com/video/1085953989?badge=0&autopause=0&player_id=0&app_id=58479"
-        className="absolute top-0 left-0 w-full h-full rounded-xl"
-        frameBorder="0"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        allowFullScreen
-        title="Hermi's Hair Spa3"
-      ></iframe>
+    <div className="flex justify-center items-center mx-auto overflow-hidden rounded-xl">
+      <div className="aspect-[9/16] max-w-[140px] w-full">
+        <iframe
+          src="https://player.vimeo.com/video/1085953989?badge=0&autopause=0&player_id=0&app_id=58479"
+          className="h-full w-full rounded-xl"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title="Hermi's Hair Spa3"
+        ></iframe>
+      </div>
     </div>
-
     {/* Video 4 */}
-    <div className="relative w-full pt-[177.78%] rounded-xl overflow-hidden">
-      <iframe
-        src="https://player.vimeo.com/video/1085954665?badge=0&autopause=0&player_id=0&app_id=58479"
-        className="absolute top-0 left-0 w-full h-full rounded-xl"
-        frameBorder="0"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        allowFullScreen
-        title="NewBorn4"
-      ></iframe>
+    <div className="flex justify-center items-center mx-auto overflow-hidden rounded-xl">
+      <div className="aspect-[9/16] max-w-[140px] w-full">
+        <iframe
+          src="https://player.vimeo.com/video/1085954665?badge=0&autopause=0&player_id=0&app_id=58479"
+          className="h-full w-full rounded-xl"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title="NewBorn4"
+        ></iframe>
+      </div>
     </div>
-
     {/* Video 5 */}
-    <div className="relative w-full pt-[177.78%] rounded-xl overflow-hidden">
-      <iframe
-        src="https://player.vimeo.com/video/1085953913?badge=0&autopause=0&player_id=0&app_id=58479"
-        className="absolute top-0 left-0 w-full h-full rounded-xl"
-        frameBorder="0"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        allowFullScreen
-        title="Nagar Kirtan 2025 5"
-      ></iframe>
+    <div className="flex justify-center items-center mx-auto overflow-hidden rounded-xl">
+      <div className="aspect-[9/16] max-w-[140px] w-full">
+        <iframe
+          src="https://player.vimeo.com/video/1085953913?badge=0&autopause=0&player_id=0&app_id=58479"
+          className="h-full w-full rounded-xl"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title="Nagar Kirtan 2025 5"
+        ></iframe>
+      </div>
     </div>
-
     {/* Video 6 */}
-    <div className="relative w-full pt-[179.63%] rounded-xl overflow-hidden">
-      <iframe
-        src="https://player.vimeo.com/video/1085953809?badge=0&autopause=0&player_id=0&app_id=58479"
-        className="absolute top-0 left-0 w-full h-full rounded-xl"
-        frameBorder="0"
-        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-        allowFullScreen
-        title="HKP Feel The Fun6"
-      ></iframe>
+    <div className="flex justify-center items-center mx-auto overflow-hidden rounded-xl">
+      <div className="aspect-[9/16] max-w-[140px] w-full">
+        <iframe
+          src="https://player.vimeo.com/video/1085953809?badge=0&autopause=0&player_id=0&app_id=58479"
+          className="h-full w-full rounded-xl"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title="HKP Feel The Fun6"
+        ></iframe>
+      </div>
     </div>
     {/* Video 7 */}
-<div className="relative w-full pt-[177.78%] rounded-xl overflow-hidden">
-  <iframe
-    src="https://player.vimeo.com/video/1085954063?badge=0&autopause=0&player_id=0&app_id=58479"
-    className="absolute top-0 left-0 w-full h-full rounded-xl"
-    frameBorder="0"
-    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-    allowFullScreen
-    title="Vaisakhi2024 7"
-  ></iframe>
-</div>
-
+    <div className="flex justify-center items-center mx-auto overflow-hidden rounded-xl">
+      <div className="aspect-[9/16] max-w-[140px] w-full">
+        <iframe
+          src="https://player.vimeo.com/video/1085954063?badge=0&autopause=0&player_id=0&app_id=58479"
+          className="h-full w-full rounded-xl"
+          frameBorder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowFullScreen
+          title="Vaisakhi2024 7"
+        ></iframe>
+      </div>
+    </div>
   </div>
 </div>
 

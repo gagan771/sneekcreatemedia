@@ -195,7 +195,7 @@ export default function CategoryPage() {
           >
             Video Projects
           </motion.h2>
-          <div ref={ref} className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div ref={ref} className="grid gap-2 grid-cols-2 sm:grid-cols-2 md:grid-cols-3">
             {currentCategory.videos.map((video, index) => (
               <motion.div
                 key={index}
@@ -205,7 +205,7 @@ export default function CategoryPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <div className="flex justify-center items-center mx-auto overflow-hidden rounded-xl">
-                  <div className="aspect-[9/16] max-w-xs w-full">
+                  <div className="aspect-[9/16] max-w-[140px] w-full">
                     <iframe
                       className="h-full w-full rounded-xl"
                       src={video.embedUrl}

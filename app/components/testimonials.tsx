@@ -26,17 +26,17 @@ export default function Testimonials() {
           </p>
         </motion.div>
 
-        <div className="grid gap-12 md:grid-cols-2">
+        <div className="grid gap-2 grid-cols-2 sm:grid-cols-2 md:grid-cols-2">
           {/* Video Testimonial - Mobile optimized with max-height */}
           <motion.div
-            className="relative overflow-hidden rounded-lg shadow-xl"
+            className="relative overflow-hidden rounded-lg shadow-xl flex justify-center items-center mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="aspect-[9/16] max-h-[450px] w-full">
+            <div className="aspect-[9/16] max-w-[140px] w-full">
               <iframe
-                className="h-full w-full"
+                className="h-full w-full rounded-xl"
                 src="https://player.vimeo.com/video/1085947636"
                 title="Client Testimonial"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,9 +47,8 @@ export default function Testimonials() {
 
           {/* Text Testimonials */}
           
-          </div>
         </div>
-      
+      </div>
     </section>
   )
 }

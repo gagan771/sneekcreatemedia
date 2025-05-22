@@ -101,3 +101,18 @@ html {
 ::selection {
   @apply bg-orange-500/30 text-foreground;
 }
+
+/* Vimeo video styles */
+.vimeo-video {
+    width: 100%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .vimeo-video {
+        width: 48%; /* Adjust to fit two videos side by side */
+        display: inline-block; /* Allow videos to sit next to each other */
+        margin: 1%; /* Add some spacing */
+    }
+}
