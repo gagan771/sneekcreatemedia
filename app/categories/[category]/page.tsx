@@ -24,19 +24,19 @@ export default function CategoryPage() {
       color: "from-orange-500 to-amber-600",
       videos: [
         {
-          title: "Nadia Pir Real Estate",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085539222?badge=0&autopause=0&player_id=0&app_id=58479",
         },
         {
-          title: "Modern Apartment Showcase",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085540189?badge=0&autopause=0&player_id=0&app_id=58479",
         },
         {
-          title: "Commercial Space Highlight",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085540225?badge=0&autopause=0&player_id=0&app_id=58479",
         },
         {
-          title: "Beachfront Property",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085540636?badge=0&autopause=0&player_id=0&app_id=58479",
         },
       ],
@@ -78,19 +78,19 @@ export default function CategoryPage() {
       color: "from-amber-500 to-yellow-400",
       videos: [
         {
-          title: "17thAve",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085576925?badge=0&autopause=0&player_id=0&app_id=58479",
         },
         {
-          title: "Bar",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085577008?badge=0&autopause=0&player_id=0&app_id=58479",
         },
         {
-          title: "FineDine",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085577077?badge=0&autopause=0&player_id=0&app_id=58479",
         },
         {
-  title: "LaCiel Fine Dine",
+  title: "",
   embedUrl: "https://player.vimeo.com/video/1085577038?badge=0&autopause=0&player_id=0&app_id=58479"
 }
 
