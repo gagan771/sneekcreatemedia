@@ -12,16 +12,19 @@ export default function Gallery() {
 
   // Video data - Update embedUrl and title to change videos
   const videos = [
-    {
-      title: "FineDine",
+    
+{
+      title: "",
+      embedUrl: "https://player.vimeo.com/video/1086480161",
+    },
+
+{
+      title: "",
       embedUrl: "https://player.vimeo.com/video/1085954269",
     },
+    
     {
-      title: "Elegant Wedding",
-      embedUrl: "https://player.vimeo.com/video/1085540189?badge=0&autopause=0&player_id=0&app_id=58479",
-    },
-    {
-      title: "Timmy Sharma",
+      title: "",
       embedUrl: "https://player.vimeo.com/video/1085955175",
     },
   ]
