@@ -10,18 +10,18 @@ export default function Gallery() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true })
 
-  // Video data - Update embedUrl and title to change videos
   const videos = [
+    
     {
-      title: "FineDine",
+      title: "",
+      embedUrl: "https://player.vimeo.com/video/1086480161?h=d4e7acd8e2&badge=0&autopause=0&player_id=0&app_id=58479",
+    },
+    {
+      title: "",
       embedUrl: "https://player.vimeo.com/video/1085954269",
     },
     {
-      title: "Elegant Wedding",
-      embedUrl: "https://player.vimeo.com/video/1085540189?badge=0&autopause=0&player_id=0&app_id=58479",
-    },
-    {
-      title: "Timmy Sharma",
+      title: "",
       embedUrl: "https://player.vimeo.com/video/1085955175",
     },
   ]
@@ -42,23 +42,25 @@ export default function Gallery() {
           {videos.map((video, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden rounded-lg"
+              className="w-full overflow-hidden rounded-xl shadow-md"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              {/* Mobile-optimized video container with max-height */}
-              <div className="aspect-[9/16] max-h-[450px] overflow-hidden">
+              {/* Responsive Video Wrapper */}
+              <div className="relative w-full aspect-[9/16] sm:aspect-video lg:h-[450px]">
                 <iframe
-                  className="h-full w-full"
+                  className="absolute top-0 left-0 h-full w-full rounded-xl"
                   src={video.embedUrl}
                   title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
                 ></iframe>
               </div>
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                <h3 className="text-lg font-semibold text-white">{video.title}</h3>
+
+              {/* Optional title overlay */}
+              <div className="bg-black/70 p-3 text-white text-sm">
+                {video.title || ""}
               </div>
             </motion.div>
           ))}

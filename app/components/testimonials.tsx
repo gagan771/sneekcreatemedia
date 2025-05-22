@@ -46,55 +46,10 @@ export default function Testimonials() {
           </motion.div>
 
           {/* Text Testimonials */}
-          <div className="flex flex-col justify-center space-y-8">
-            <motion.div
-              className="relative rounded-lg bg-zinc-800/50 p-6 backdrop-blur-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              <Quote className="absolute -left-3 -top-3 h-8 w-8 text-orange-500 opacity-50" />
-              <p className="mb-4 text-lg italic text-gray-300">
-                "Harshaan captured our property in a way that truly showcased its best features. The video quality was
-                exceptional, and he was professional throughout the entire process. Our listing received significantly
-                more interest thanks to his work!"
-              </p>
-              <div className="flex items-center">
-                <div className="mr-4 h-12 w-12 overflow-hidden rounded-full bg-gradient-to-r from-orange-500 to-amber-600">
-                  <div className="flex h-full w-full items-center justify-center text-white">JD</div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">John Doe</h4>
-                  <p className="text-sm text-gray-400">Real Estate Agent</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="relative rounded-lg bg-zinc-800/50 p-6 backdrop-blur-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Quote className="absolute -left-3 -top-3 h-8 w-8 text-orange-500 opacity-50" />
-              <p className="mb-4 text-lg italic text-gray-300">
-                "Working with Harshaan was a game-changer for our social media content. His creativity and attention to
-                detail resulted in videos that perfectly captured our brand's essence. The engagement on our posts has
-                increased dramatically!"
-              </p>
-              <div className="flex items-center">
-                <div className="mr-4 h-12 w-12 overflow-hidden rounded-full bg-gradient-to-r from-pink-500 to-purple-600">
-                  <div className="flex h-full w-full items-center justify-center text-white">JS</div>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white">Jane Smith</h4>
-                  <p className="text-sm text-gray-400">Marketing Director</p>
-                </div>
-              </div>
-            </motion.div>
+          
           </div>
         </div>
-      </div>
+      
     </section>
   )
 }

@@ -5,6 +5,7 @@ import Testimonials from "./components/testimonials"
 import Contact from "./components/contact"
 import Footer from "./components/footer"
 import Navbar from "./components/navbar"
+import CalendlyWidget from "./components/calendly-widget"
 
 export default function Page() {
   return (
@@ -14,8 +15,7 @@ export default function Page() {
       <Gallery />
       <Testimonials />
       <Pricing />
-      
-      <Contact />
+      <CalendlyWidget />
       <Footer />
     </main>
   )

@@ -9,11 +9,18 @@ import { useRef } from "react"
 import Navbar from "../components/navbar"
 
 // Video component for easier editing
-const VideoItem = ({ embedUrl, delay = 0 }) => {
-  const isInView = useInView({ once: true })
+interface VideoItemProps {
+  embedUrl: string;
+  delay?: number;
+}
+
+const VideoItem = ({ embedUrl, delay = 0 }: VideoItemProps) => {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true })
 
   return (
     <motion.div
+      ref={ref}
       className="overflow-hidden rounded-lg"
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -55,21 +62,14 @@ export default function CategoriesPage() {
       color: "from-purple-500 to-pink-400",
     },
     {
-      title: "Commercial",
+      title: "Restaurants",
       description: "Brand stories and product showcases",
       image:
         "https://images.unsplash.com/photo-1531058020387-3be344556be6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fE1FRVRJTkd8ZW58MHx8MHx8fDA%3D",
       slug: "commercial",
       color: "from-amber-500 to-yellow-400",
     },
-    {
-      title: "Content Creation",
-      description: "Social media and digital marketing content",
-      image:
-        "https://images.unsplash.com/photo-1577327966244-999949c7e884?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Q09OVEVOVCUyMENSRUFUSU9OfGVufDB8fDB8fHww",
-      slug: "content-creation",
-      color: "from-green-500 to-emerald-400",
-    },
+    
   ]
 
   return (
@@ -140,57 +140,107 @@ export default function CategoriesPage() {
             </motion.div>
           ))}
         </div>
+{/* Other Work Section */}
+<div className="mt-20">
+  <motion.h2
+    className="mb-8 bg-gradient-to-r from-blue-500 to-indigo-600 bg-clip-text text-3xl font-bold tracking-tighter text-center text-transparent"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8 }}
+  >
+    Other Work
+  </motion.h2>
 
-        {/* Other Work Section - Individual video components instead of array mapping */}
-        <div className="mt-20">
-          <motion.h2
-            className="mb-8 bg-gradient-to-r from-orange-500 via-amber-500 to-red-500 bg-clip-text text-3xl font-bold tracking-tighter text-center text-transparent"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Other Work
-          </motion.h2>
+  <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    {/* Video 1 */}
+    <div className="relative w-full pt-[179.63%] rounded-xl overflow-hidden">
+      <iframe
+        src="https://player.vimeo.com/video/1085953881?badge=0&autopause=0&player_id=0&app_id=58479"
+        className="absolute top-0 left-0 w-full h-full rounded-xl"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowFullScreen
+        title="HKP- Feel The Fun1"
+      ></iframe>
+    </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {/* 
-              INDIVIDUAL VIDEO COMPONENTS
-              To change a video, just update the embedUrl prop with your new Vimeo link
-              Each video is now a separate component for easier editing
-            */}
+    {/* Video 2 */}
+    <div className="relative w-full pt-[177.78%] rounded-xl overflow-hidden">
+      <iframe
+        src="https://player.vimeo.com/video/1085953962?badge=0&autopause=0&player_id=0&app_id=58479"
+        className="absolute top-0 left-0 w-full h-full rounded-xl"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowFullScreen
+        title="CulturalEvent BowValleyCollege2"
+      ></iframe>
+    </div>
 
-            {/* Video 1 - Real Estate */}
-            <VideoItem
-              embedUrl="https://player.vimeo.com/video/1085539222?badge=0&autopause=0&player_id=0&app_id=58479"
-              delay={0.1}
-            />
+    {/* Video 3 */}
+    <div className="relative w-full pt-[179.63%] rounded-xl overflow-hidden">
+      <iframe
+        src="https://player.vimeo.com/video/1085953989?badge=0&autopause=0&player_id=0&app_id=58479"
+        className="absolute top-0 left-0 w-full h-full rounded-xl"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowFullScreen
+        title="Hermi's Hair Spa3"
+      ></iframe>
+    </div>
 
-            {/* Video 2 - Real Estate */}
-            <VideoItem
-              embedUrl="https://player.vimeo.com/video/1085540189?badge=0&autopause=0&player_id=0&app_id=58479"
-              delay={0.2}
-            />
+    {/* Video 4 */}
+    <div className="relative w-full pt-[177.78%] rounded-xl overflow-hidden">
+      <iframe
+        src="https://player.vimeo.com/video/1085954665?badge=0&autopause=0&player_id=0&app_id=58479"
+        className="absolute top-0 left-0 w-full h-full rounded-xl"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowFullScreen
+        title="NewBorn4"
+      ></iframe>
+    </div>
 
-            {/* Video 3 - Events */}
-            <VideoItem embedUrl="https://player.vimeo.com/video/1085541918" delay={0.3} />
+    {/* Video 5 */}
+    <div className="relative w-full pt-[177.78%] rounded-xl overflow-hidden">
+      <iframe
+        src="https://player.vimeo.com/video/1085953913?badge=0&autopause=0&player_id=0&app_id=58479"
+        className="absolute top-0 left-0 w-full h-full rounded-xl"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowFullScreen
+        title="Nagar Kirtan 2025 5"
+      ></iframe>
+    </div>
 
-            {/* Video 4 - Events */}
-            <VideoItem embedUrl="https://player.vimeo.com/video/1085541845" delay={0.4} />
+    {/* Video 6 */}
+    <div className="relative w-full pt-[179.63%] rounded-xl overflow-hidden">
+      <iframe
+        src="https://player.vimeo.com/video/1085953809?badge=0&autopause=0&player_id=0&app_id=58479"
+        className="absolute top-0 left-0 w-full h-full rounded-xl"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowFullScreen
+        title="HKP Feel The Fun6"
+      ></iframe>
+    </div>
+    {/* Video 7 */}
+<div className="relative w-full pt-[177.78%] rounded-xl overflow-hidden">
+  <iframe
+    src="https://player.vimeo.com/video/1085954063?badge=0&autopause=0&player_id=0&app_id=58479"
+    className="absolute top-0 left-0 w-full h-full rounded-xl"
+    frameBorder="0"
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+    allowFullScreen
+    title="Vaisakhi2024 7"
+  ></iframe>
+</div>
 
-            {/* Video 5 - Commercial */}
-            <VideoItem
-              embedUrl="https://player.vimeo.com/video/1085576925?badge=0&autopause=0&player_id=0&app_id=58479"
-              delay={0.5}
-            />
+  </div>
+</div>
 
-            {/* Video 6 - Commercial */}
-            <VideoItem
-              embedUrl="https://player.vimeo.com/video/1085577008?badge=0&autopause=0&player_id=0&app_id=58479"
-              delay={0.6}
-            />
+        
           </div>
-        </div>
-      </div>
+        
     </main>
   )
 }

@@ -20,7 +20,7 @@ export default function CategoryPage() {
     "real-estate": {
       title: "Real Estate",
       description:
-        "Elevating property marketing through cinematic videography. My real estate videos showcase properties in their best light, highlighting architectural details, spatial flow, and unique features. From luxury homes to commercial spaces, I create compelling visual narratives that help properties stand out in a competitive market.",
+        "",
       color: "from-orange-500 to-amber-600",
       videos: [
         {
@@ -45,36 +45,36 @@ export default function CategoryPage() {
     events: {
       title: "Events",
       description:
-        "Capturing the emotion and energy of special moments. My event videography services cover weddings, corporate gatherings, concerts, and private celebrations. I focus on authentic storytelling, ensuring that the essence of each event is preserved through cinematic techniques, thoughtful composition, and attention to meaningful interactions.",
+        "",
       color: "from-purple-500 to-pink-400",
       videos: [
         {
-          title: "SharmaWealth",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085541918",
         },
         {
-          title: "EmpowerConnect",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085541845",
         },
         {
-          title: "First Step Together",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085953725",
         },
         {
-          title: "TechConnectAlberta",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085541946",
         },
         {
-          title: "UntappedEnergy",
+          title: "",
           embedUrl: "https://player.vimeo.com/video/1085542063",
         },
       ],
       photos: [],
     },
     commercial: {
-      title: "Commercial",
+      title: "Restaurant",
       description:
-        "Creating compelling visual content for brands and businesses. My commercial videography helps companies communicate their value proposition through powerful visual storytelling. From brand films and product demonstrations to testimonials and promotional content, I develop videos that engage audiences and drive business objectives.",
+        "",
       color: "from-amber-500 to-yellow-400",
       videos: [
         {
@@ -89,6 +89,11 @@ export default function CategoryPage() {
           title: "FineDine",
           embedUrl: "https://player.vimeo.com/video/1085577077?badge=0&autopause=0&player_id=0&app_id=58479",
         },
+        {
+  title: "LaCiel Fine Dine",
+  embedUrl: "https://player.vimeo.com/video/1085577038?badge=0&autopause=0&player_id=0&app_id=58479"
+}
+
       ],
       photos: [
         {
@@ -199,14 +204,16 @@ export default function CategoryPage() {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="aspect-[9/16] max-h-[350px] overflow-hidden">
-                  <iframe
-                    className="h-full w-full"
-                    src={video.embedUrl}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                <div className="flex justify-center items-center mx-auto overflow-hidden rounded-xl">
+                  <div className="aspect-[9/16] max-w-xs w-full">
+                    <iframe
+                      className="h-full w-full rounded-xl"
+                      src={video.embedUrl}
+                      title={video.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-4">
                   <h3 className="text-lg font-semibold text-white">{video.title}</h3>
