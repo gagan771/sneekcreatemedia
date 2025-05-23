@@ -4,8 +4,7 @@ import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
 import { Check, Sparkles, Video, Camera, Sun } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function Pricing() {
   const ref = useRef(null)
@@ -153,17 +152,6 @@ export default function Pricing() {
                     ))}
                   </ul>
                 </CardContent>
-                <CardFooter>
-                  <Button className={`w-full bg-gradient-to-r ${plan.color} hover:opacity-90`}>
-                    {plan.popular ? (
-                      <span className="flex items-center gap-2">
-                        <Sparkles className="h-4 w-4" /> Get Started
-                      </span>
-                    ) : (
-                      "Get Started"
-                    )}
-                  </Button>
-                </CardFooter>
               </Card>
             </motion.div>
           ))}
