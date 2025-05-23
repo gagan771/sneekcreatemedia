@@ -19,7 +19,7 @@ export default function CalendlyWidget() {
     <div
       ref={ref}
       className="calendly-inline-widget"
-      data-url="https://calendly.com/gaganbhardwaj514/30min"
+      data-url="https://calendly.com/harshaan-create/discovery-call"
       style={{ minWidth: "320px", height: "700px" }}
     ></div>
   )
